@@ -31,6 +31,8 @@ public class PlayerStats {
     public float HAR;
 
     public PlayerStats(float[] stats, String playerFullName, int numOfGames) {
+        this.playerName = playerFullName;
+        this.gamesPlayed = numOfGames;
         this.FTM = stats[0];
         this.FTA = stats[1];
         this.FTT = (this.FTM / this.FTA) * 100;
@@ -46,17 +48,15 @@ public class PlayerStats {
         this.AST = stats[8];
         this.STL = stats[9];
         this.TOV = stats[10];
-        this.V = calculateValorization() * 100;
+        this.V = calculateValorization();
         this.EFGP = calculateEffectiveFieldGoalPercentage() * 100;
         this.TS = calculateTrueShootingPercentage() * 100;
         this.HAR = calculateHollingerAssistRatio() * 100;
 
-        this.playerName = playerFullName;
-        this.gamesPlayed = numOfGames;
     }
 
     private float calculateValorization() {
-        return (PM2 * 2 + PM3 * 3 + FTM + REB + AST + STL + BLK) - ((PA2 - PM2) * 2 + (PA3 - PM3) * 3 + FTA - FTM + TOV);
+        return (PM2 * 2 + PM3 * 3 + FTM + REB + AST + STL + BLK) - (PA2 - PM2 + PA3 - PM3 + FTA - FTM + TOV);
     }
 
     private float calculateEffectiveFieldGoalPercentage() {
