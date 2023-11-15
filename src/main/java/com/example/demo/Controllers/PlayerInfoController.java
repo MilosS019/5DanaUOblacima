@@ -25,8 +25,7 @@ public class PlayerInfoController {
 
     @GetMapping("/{playerFullName}")
     public ResponseEntity<PlayerStatsDto> getStats(@PathVariable String playerFullName) throws IOException {
-        List<Game>games = gamesService.getAllGames();
-        PlayerStats playerStats = playerStatsService.getStats(playerFullName, games);
+        PlayerStats playerStats = playerStatsService.getStats(playerFullName);
         return new ResponseEntity<>(new PlayerStatsDto(playerStats), HttpStatus.OK);
     }
 }

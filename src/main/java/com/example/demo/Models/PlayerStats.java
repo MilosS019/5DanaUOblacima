@@ -68,6 +68,6 @@ public class PlayerStats {
     }
 
     private float calculateTrueShootingPercentage() {
-        return (float) ((PM2 * 2 + PM3 * 3 + FTM) / (2 * (PA2 + PA3 + (0.44 * FTA))));
+        return (float) ((PM2 * 2 + PM3 * 3 + FTM) / (2 * (PA2 + PA3 + (0.475 * FTA))));
     }
 }

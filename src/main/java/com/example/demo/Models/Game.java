@@ -1,5 +1,9 @@
 package com.example.demo.Models;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -7,9 +11,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
+@Entity
 public class Game {
-    public String playerName;
-    public String playerSurName;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    public String playerFullName;
     public String playerPosition;
     public int FTM;
     public int FTA;
@@ -24,9 +31,7 @@ public class Game {
     public int TOV;
 
     public Game(String[] values) {
-        String[] playerNameAndSurName = values[0].split(" ");
-        this.playerName = playerNameAndSurName[0];
-        this.playerSurName = playerNameAndSurName[1];
+        this.playerFullName = values[0];
         this.playerPosition = values[1];
         this.FTM = Integer.valueOf(values[2]);
         this.FTA = Integer.valueOf(values[3]);
