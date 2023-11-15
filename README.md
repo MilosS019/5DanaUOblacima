@@ -7,7 +7,7 @@ Aplikacija za izracunavanje uspesnosti i proseka kosarkasa
 Spring boot 3.1.5 applikacija sa maven buildom
 
 ### Nacin pokretanja
-Na putanji src/main/java/com.example.demo/DemoApplication se nalazi file iz koga se pokrece cela spring boot aplikacija, sve sto je potrebno je imati instalirano neko razvojno java okruzenja, npr. Intellij ili Eclipse
+Na putanji `src/main/java/com.example.demo/DemoApplication` se nalazi file iz koga se pokrece cela spring boot aplikacija, sve sto je potrebno je imati instalirano neko razvojno java okruzenja, npr. `Intellij` ili `Eclipse`
 
 Link do screenshota lokacije fajla: `https://ibb.co/tZs6WW1`
 
