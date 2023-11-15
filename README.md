@@ -12,7 +12,7 @@ Na putanji `src/main/java/com.example.demo/DemoApplication` se nalazi file iz ko
 Link do screenshota lokacije fajla: `https://ibb.co/tZs6WW1`
 
 ### Lista korišćenih tehnologija
-    1. Spring Boot: za kreiranje API-a je korišćen spring boot
+    1. Spring Boot: za kreiranje API-a
     
     2. H2-database: in-memory baza
     
