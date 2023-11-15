@@ -15,5 +15,8 @@ Link do screenshota lokacije fajla: `https://ibb.co/tZs6WW1`
     1. Spring Boot: za kreiranje API-a
     
     2. H2-database: in-memory baza
+
+### Lokacija csv-fajla
+Trenutno se csv fajl nalazi na putanji `src/main/resources`, da bi program mogao da ocita csv on mora ostati na toj lokaciji, ukoliko se koriste jos neki test podaci, ubacite ih na tu putanju i u gameService klasi u metodi getAllGames promenite naziv fajla po potrebi.
     
 
